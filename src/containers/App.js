@@ -25,7 +25,7 @@ class App extends Component {
            }
 	}
 
-	componentDidMount() {//這個是react自有 所以不必自創功能 mouting的4種方法會按順序讀取
+	componentDidMount() {//這個是react自有 不是自創功能 mouting的4種方法會按順序讀取
         fetch('https://jsonplaceholder.typicode.com/users')//就從這邊抓數據,fetch也是window object,就製造需求的一種工具 (以後會講)
 	        .then(response => response.json())
 	        .then(users => {this.setState({ robots: users})});   
@@ -76,5 +76,5 @@ export default App;
 //onSear....一跑,state(searchfield)就會更新,不管我們在serach bar上面輸入了什麼
 //這些輸入的值會連接到Cardlist,告訴他我們要匹配(filter toLowerCase includes)searchfield
 //不是傳送this.state.robots而是filteredRobots
-//robots不會被傳 有必要成為state的一部分嗎?目前看來是不用,因為有import { robots } from './robots';,反正就之後會用到就是了(API?)
+//robots不會被傳 有必要成為state的一部分嗎?目前看來是不用,因為有import { robots } from './robots';反正就之後會用到就是了(API?)
 //API就是當這個網站被讀取的時候,製造一個需求去網路世界某些地方(jsonplaceholder)並從該伺服器抓取數據 
