@@ -1,0 +1,5 @@
+export const CHANGE_SEARCH_FIELD = 'CHANGE_SEARCH_FIELD';//同步動作
+
+export const REQUEST_ROBOTS_PENDING = 'REQUEST_ROBOTS_PENDING';//非同步動作的等待處理
+export const REQUEST_ROBOTS_SUCCESS = 'REQUEST_ROBOTS_SUCCESS';//非同步動作的處理成功
+export const REQUEST_ROBOTS_FAILED = 'REQUEST_ROBOTS_FAILED';//非同步動作的處理失敗
